@@ -12,25 +12,15 @@ const PlayerCard = ({name,img,statistics}) => {
             role="button"
             onClick={()=> {SetImage(!image)}}
             >
-            
             {image ?
-            <Card.Img  variant="top" className="player-logo" src={img}  />
-            :
-                        <ul>
-                        {statistics.map((stats,index)=>{
-        
-                            return <li key={index} className="h5 text-start list-unstyled">🏀 {stats}</li>
-        
-                        })}
-                    </ul>
-                    
-                    
-                    
-            
-
+                <Card.Img  variant="top" className="player-logo" src={img}  />
+                :
+                <ul>
+                    {statistics.map((stats,index)=>{
+                        return <li key={index} className="h5 text-start list-unstyled">🏀 {stats}</li>
+                    })}
+                </ul>
             }
-
-
             <Card.Footer>
                 <Card.Title>{name}</Card.Title>
             </Card.Footer>

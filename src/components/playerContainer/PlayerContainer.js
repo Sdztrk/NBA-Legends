@@ -14,7 +14,6 @@ const PlayerContainer = () => {
      const playerSearch = (e) => {
         setSearch(e.target.value)
      }
-
     return(
         <>
             <Form.Control
